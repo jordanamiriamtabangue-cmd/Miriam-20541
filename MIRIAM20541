@@ -1,0 +1,192 @@
+Q1: INTRO
+public class Intro{
+ public static void main(String[] args){
+ System.out.println("Name : Miriam ");
+ System.out.println("Student ID: 20541 ");
+ System.out.println("Welcome to my World. ");
+}
+ }
+
+Q2: Profile
+public class Profile {
+    public static void main(String[] args) {
+        int age = 20;
+        double height = 1.65;
+        boolean isStudent = true;
+
+        System.out.println("Age: " + age);
+        System.out.println("Height: " + height);
+        System.out.println("Is Student: " + isStudent);
+    }
+}
+
+Q3: CircleArea
+
+public class CircleArea{
+ public static void main(String[] args){
+  final double PI = 3.141559;
+  double radius = 5;
+  double area = PI* radius * radius;
+  System.out.println("Area of the circle: " +area);
+}
+ }
+
+
+Q4:Compare Numbers
+
+import java.util.Scanner;
+
+public class CompareNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first integer: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter the second integer: ");
+        int num2 = scanner.nextInt();
+
+        if (num1 > num2) {
+            System.out.println(num1 + " is larger than " + num2);
+        } else if (num2 > num1) {
+            System.out.println(num2 + " is larger than " + num1);
+        } else {
+            System.out.println("The numbers are equal.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+Q5:Grade cheker
+
+import java.util.Scanner;
+
+public class GradeChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your numerical score: ");
+        int score = scanner.nextInt();
+
+        char grade;
+        if (score >= 80) {
+            grade = 'A';
+        } else if (score >= 70) {
+            grade = 'B';
+        } else if (score >= 60) {
+            grade = 'C';
+        } else {
+            grade = 'F';
+        }
+
+        System.out.println("Your grade is: " + grade);
+        scanner.close();
+    }
+}
+
+Q6: DayName
+
+import java.util.Scanner;
+
+public class DayName {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number (1-7) for the day of the week: ");
+        int dayNumber = scanner.nextInt();
+
+        String dayName;
+        switch (dayNumber) {
+            case 1: dayName = "Monday"; break;
+            case 2: dayName = "Tuesday"; break;
+            case 3: dayName = "Wednesday"; break;
+            case 4: dayName = "Thursday"; break;
+            case 5: dayName = "Friday"; break;
+            case 6: dayName = "Saturday"; break;
+            case 7: dayName = "Sunday"; break;
+            default: dayName = "Invalid day number"; break;
+        }
+
+        System.out.println(dayName);
+        scanner.close();
+    }
+}
+
+Q7:Loop Demo
+
+public class LoopDemo {
+    public static void main(String[] args) {
+        System.out.println("Using for loop:");
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(i);
+        }
+
+        System.out.println("\nUsing while loop:");
+        int j = 1;
+        while (j <= 5) {
+            System.out.println(j);
+            j++;
+        }
+
+        System.out.println("\nUsing do-while loop:");
+        int k = 1;
+        do {
+            System.out.println(k);
+            k++;
+        } while (k <= 5);
+    }
+}
+
+Q8: MathMethods
+public class MathMethods {
+
+    public static int calculateSum(int a, int b) {
+        return a + b;
+    }
+
+    public static int calculateProduct(int a, int b) {
+        return a * b;
+    }
+
+    public static void main(String[] args) {
+        int number1 = 10;
+        int number2 = 5;
+
+        int sum = calculateSum(number1, number2);
+        int product = calculateProduct(number1, number2);
+
+        System.out.println("The sum is: " + sum);
+        System.out.println("The product is: " + product);
+    }
+}
+
+Q9:ArrayPractice
+
+public class ArrayPractice {
+    public static void main(String[] args) {
+        System.out.println("One-dimensional Array:");
+        int[] oneDArray = {10, 20, 30, 40, 50};
+        
+        for (int i = 0; i < oneDArray.length; i++) {
+            System.out.print(oneDArray[i] + " ");
+        }
+        System.out.println();
+
+        System.out.println("\nTwo-dimensional Array:");
+        int[][] twoDArray = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        for (int i = 0; i < twoDArray.length; i++) {
+            for (int j = 0; j < twoDArray[i].length; j++) {
+                System.out.print(twoDArray[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
